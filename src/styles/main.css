@@ -11,6 +11,7 @@ body, html {
     height: 100%;
 }
 
+
 body {
     font-family: "Roboto", sans-serif;
     font-size: 12px;
@@ -28,11 +29,13 @@ body {
 }
 
 .header__inner {
-    width: 67%;
+    width: 100%;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
+
+
 
 .header__title {
     font-weight: 300;
@@ -47,16 +50,16 @@ body {
  */
 
 .nav {
-    width: 67%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .nav__list {
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
     padding: 0;
     margin: 0;
-    text-align: center;
 }
 
 .nav__item {
@@ -138,7 +141,7 @@ main {
  */
 
 .headline {
-    overflow: auto;
+    width: 100%;
 }
 
 .headline__figure {
@@ -152,7 +155,6 @@ main {
 
 .headline__content {
     width: 100%;
-    padding: 1em;
 }
 
 .headline__figure figcaption {
@@ -164,7 +166,7 @@ main {
 }
 
 .headline__title {
-    font-size: 2.6em;
+    font-size: 2em;
     font-weight: 500;
 }
 
@@ -179,6 +181,8 @@ main {
     margin-top: 2em;
     cursor: pointer;
     padding: 0.67em 1em;
+    min-height: 44px;
+    min-width: 44px;
     color: white;
     border: none;
     border-radius: 5px;
@@ -188,6 +192,14 @@ main {
 
 .headline__button:hover {
     opacity: 0.8;
+}
+
+@media(min-width: 1024px) {
+    .headline {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
 }
 
 /*
@@ -212,22 +224,6 @@ main {
     border-bottom: 1px solid #eeeeee;
 }
 
-@media (min-width: 768px) {
-    .latest {
-        width: 84%;
-        margin: 60px auto;
-        text-align: center;
-    }
-}
-/*
- * post
- */
-
-.posts {
-    margin: 2.6em auto auto;
-    text-align: left;
-    overflow: auto;
-}
 
 /*
  * post item
@@ -241,7 +237,7 @@ main {
 }
 
 .post-item__content {
-    padding: 1em 2.6em 2.6em 2.6em;
+    padding: 1.2em;
 }
 
 .post-item__thumbnail {
